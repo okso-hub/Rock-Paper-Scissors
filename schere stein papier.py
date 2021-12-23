@@ -8,56 +8,56 @@ pp = False
 points1 = 0
 points2 = 0
 
-# Wahl -> Person vs Computer | PvP
+# Choice -> Person vs Computer / PvP
 gameMode = int(input("1 -> 1 VS 1 \n2 -> 1 VS CPU \n"))
 
-# PvP Modus | Namen und boolean, um die Schleife auszufuehren
+# PvP Modus | Names and boolean
 if gameMode == 1:
      player1_name = str(input("Name of player 1: "))
      player2_name = str(input("Name of player 2: "))
      pp = True
 
-# Person vs CPU | boolean, um die Schleife auszufuehren to call the while loop
+# Person vs CPU 
 elif gameMode == 2:
      pc = True
 
-# while loop for 1vscpu
+# while loop for p vs cpu
 while pc:
      player = int(input("Choose your weapon! \n \n1 -> Rock \n2 -> Paper \n3 -> Scissors\n4 -> End the game\n"))
-     cpu = choice(["Rock", "Paper", "Scissors"])
+     cpu = choice(["Rock", "Paper", "Scissors"]) 
 
-     if player == 1 and cpu == "Rock":
+     if player == 1:
           sleep(1.5)
-          print("The computer chose Rock too! \nNobody won!")
-     elif player == 2 and cpu == "Paper":
+          if cpu == "Rock":
+               print("The computer chose Rock too! \nNobody won!")
+          elif cpu == "Paper":
+               print("The computer chose Paper! \nThe computer won! \nNEW ROUND \n \n")
+          else:
+               print("The computer chose Scissors! \nYou won! \nNEW ROUND \n \n")
+
+     elif player == 2:
           sleep(1.5)
-          print("The computer chose Paper too! \nNobody won!")
-     elif player == 3 and cpu == "Scissors":
+          if cpu == "Paper":
+               print("The computer chose Paper too! \nNobody won!")
+          elif cpu == "Scissors":
+               print("The computer chose Scissors! \nThe computer won! \nNEW ROUND \n \n")
+          else:
+               print("The computer chose Rock! \nYou won! \nNEW ROUND \n \n")
+
+     elif player == 3:
           sleep(1.5)
-          print("The computer chose Scissors too! \nNobody won!")
+          if cpu == "Scissors":
+               sleep(1.5)
+               print("The computer chose Scissors too! \nNobody won!")
+          elif cpu == "Rock":
+               print("The computer chose Rock! \nThe computer won! \nNEW ROUND \n \n")
+          else:
+               print("The computer chose Paper! \nYou won! \nNEW ROUND \n \n")
+          
 
      if player == 4:
           print("Game ends.")
           break
-
-     elif player == 1:
-          sleep(1.5)
-          if cpu == "Paper":
-               print("The computer chose Paper! \nThe computer won! \nNEW ROUND \n \n")
-          else:
-               print("The computer chose Scissors! \nYou won! \nNEW ROUND \n \n")
-     elif player == 2:
-          sleep(1.5)
-          if cpu == "Scissors":
-               print("The computer chose Scissors! \nThe computer won! \nNEW ROUND \n \n")
-          else:
-               print("The computer chose Rock! \nYou won! \nNEW ROUND \n \n")
-     elif player == 3:
-          sleep(1.5)
-          if cpu == "Rock":
-               print("The computer chose Rock! \nThe computer won! \nNEW ROUND \n \n")
-          else:
-               print("The computer chose Paper! \nYou won! \nNEW ROUND \n \n")
 
 # while loop for 1vs1
 while pp:
