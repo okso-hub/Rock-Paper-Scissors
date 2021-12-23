@@ -65,9 +65,6 @@ while pp:
      player1 = int(input(f"Choose your weapon, {player1_name}! \n \n1 -> Rock \n2 -> Paper \n3 -> Scissors\n4 -> End game\n"))
      player2 = int(input(f"Choose your weapon, {player2_name}! \n \n1 -> Rock \n2 -> Paper \n3 -> Scissors\n4 -> End game\n"))
 
-     #global points1
-     #global points2
-
      if player1 == 1:
           if player2 == player1:
                sleep(1.5)
@@ -75,14 +72,14 @@ while pp:
                print(f"Points:\n{player1_name}: {points1}, {player2_name}: {points2}")
           elif player2 == 2:
                sleep(1.5)
-               print(f"\n \n" + player1_name + ": Rock \n" + player2_name + ": Paper \n" + player2_name, " won! \n \n")
+               print(f"\n \n{player1_name}: Rock \n{player2_name}: Paper \n{player2_name} won! \n \n")
                points2 += 1
                print(f"Points:\n{player1_name}: {points1}, {player2_name}: {points2}")
           elif player2 == 3:
                sleep(1.5)
-               print(f"\n \n" + player1_name, ": Rock \n" + player2_name + ": Scissors \n" + player1_name, "won! \n \n")
+               print(f"\n \n{player1_name}: Rock \n{player2_name}: Scissors \n{player1_name} won! \n \n")
                points1 += 1
-               print(f"Points:\n" + player1_name + ":", points1, player2_name + ":", points2)
+               print(f"Points:\n{player1_name}: {points1}, {player2_name}: {points2}")
      elif player1 == 2:
           if player2 == player1:
                sleep(1.5)
@@ -90,7 +87,7 @@ while pp:
                print(f"Points:\n{player1_name}: {points1}, {player2_name}: {points2}")
           elif player2 == 1:
                sleep(1.5)
-               print(f"\n \n" + player1_name + ": Paper \n" + player2_name + ": Rock \n" + player1_name, "won! \n \n")
+               print(f"\n \n{player1_name}: Paper \n{player2_name}: Rock \n{player1_name}won! \n \n")
                points1 += 1
                print(f"Points:\n{player1_name}: {points1}, {player2_name}: {points2}")
      elif player1 == 3:
@@ -100,12 +97,12 @@ while pp:
                print(f"Points:\n{player1_name}: {points1}, {player2_name}: {points2}")
           elif player2 == 1:
                sleep(1.5)
-               print(f"\n \n" + player1_name + ": Scissors \n" + player2_name + ": Rock\n" + player2_name, "won! \n \n")
+               print(f"\n \n{player1_name}: Scissors \n{player2_name}: Rock\n{player2_name}won! \n \n")
                points2 += 1
                print(f"Points:\n{player1_name}: {points1}, {player2_name}: {points2}")
           elif player2 == 2:
                sleep(1.5)
-               print(f"\n \n" + player1_name + ": Scissors\n" + player2_name + ": Paper\n" + player1_name, "won! \n \n")
+               print(f"\n \n{player1_name}: Scissors\n{player2_name}: Paper\{ player1_name}won! \n \n")
                points1 += 1
                print(f"Points:\n{player1_name}: {points1}, {player2_name}: {points2}")
      elif player1 == 4:
