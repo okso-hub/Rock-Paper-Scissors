@@ -1,5 +1,8 @@
 from random import choice
 from time import sleep
+import os
+
+clear = lambda: os.system('clear') if os.name == 'posix' else os.system('cls')
 
 # Person vs Computer
 pc = False
